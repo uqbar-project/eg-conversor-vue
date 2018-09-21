@@ -1,0 +1,46 @@
+<template>
+    <div class="hello">
+        <h2>Conversor de millas a kilómetros</h2>
+        <form>
+            <div class="form-group">
+                <label class="form-check-label">Millas</label>
+                <input type="text" v-model="conversor.millas" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <button @click="conversor.convertir()" type="button" class="btn btn-primary">Convertir</button>
+            </div>
+            <div class="form-group">
+                <div class="alert alert-info" role="alert">
+                    <b>Kilómetros: </b>{{conversor.kilometros}}
+                </div>
+            </div>
+        </form>
+    </div>
+</template>
+
+<script lang="ts">
+	class Conversor {
+		millas = 0
+		kilometros = 0
+
+		convertir() {
+			this.kilometros = this.millas * 1.603944
+		}
+	}
+
+	export default {
+		data() {
+			return {
+				conversor: new Conversor()
+			}
+		}
+	}
+</script>
+
+<style>
+    #app {
+        background-color: white;
+        padding: 2rem;
+        margin: 2rem;
+    }
+</style>
