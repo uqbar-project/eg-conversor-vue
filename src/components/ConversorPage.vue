@@ -1,17 +1,17 @@
 <template>
-    <div class="hello">
-        <h2>Conversor de millas a kilómetros</h2>
+    <div>
+        <h2 id="titulo">Conversor de millas a kilómetros</h2>
         <form>
             <div class="form-group">
                 <label class="form-check-label">Millas</label>
-                <input type="text" v-model="conversor.millas" class="form-control"/>
+                <input type="text" v-model="conversor.millas" class="form-control" id="millas"/>
             </div>
             <div class="form-group">
                 <button @click="conversor.convertir()" type="button" class="btn btn-primary">Convertir</button>
             </div>
             <div class="form-group">
                 <div class="alert alert-info" role="alert">
-                    <b>Kilómetros: </b>{{conversor.kilometros}}
+                    <b>Kilómetros: </b><span id="kilometros">{{conversor.kilometros}}</span>
                 </div>
             </div>
         </form>

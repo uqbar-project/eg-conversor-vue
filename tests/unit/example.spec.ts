@@ -1,12 +1,19 @@
-import { shallowMount } from "@vue/test-utils";
-import HelloWorld from "@/components/ConversorPage.vue";
+import { shallowMount } from "@vue/test-utils"
+import ConversorPage from "@/components/ConversorPage.vue"
 
-describe("HelloWorld.vue", () => {
-  it("renders props.msg when passed", () => {
-    const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
+describe("ConversorPage.vue", () => {
+  it("muestra el título cuando arranca la app", () => {
+    const msg = "Conversor de millas a kilómetros"
+    const wrapper = shallowMount(ConversorPage, {
       propsData: { msg }
-    });
-    expect(wrapper.text()).toMatch(msg);
-  });
-});
+    })
+    expect(wrapper.find('#titulo').text()).toMatch(msg)
+  })
+	it("muestra el título cuando arranca la app", () => {
+		const msg = "Conversor de millas a kilómetros"
+		const wrapper = shallowMount(ConversorPage, {
+			propsData: { msg }
+		})
+		expect(wrapper.find('#titulo').text()).toMatch(msg)
+	})
+})
