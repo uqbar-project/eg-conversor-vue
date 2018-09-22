@@ -1,5 +1,7 @@
 # Conversor de millas a kilómetros
 
+[![Build Status](https://travis-ci.com/uqbar-project/eg-conversor-vue.svg?branch=master)](https://travis-ci.com/uqbar-project/eg-conversor-vue)
+
 El típico ejemplo del conversor de millas a kilómetros, ideal para conocer la arquitectura Vue.JS.
 
 ![demo](video/demo.gif)
