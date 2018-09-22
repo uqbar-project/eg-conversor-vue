@@ -7,7 +7,7 @@
                 <input type="text" v-model="conversor.millas" class="form-control" id="millas"/>
             </div>
             <div class="form-group">
-                <button @click="conversor.convertir()" type="button" class="btn btn-primary">Convertir</button>
+                <button @click="conversor.convertir()" type="button" class="btn btn-primary" id="convertir">Convertir</button>
             </div>
             <div class="form-group">
                 <div class="alert alert-info" role="alert">
