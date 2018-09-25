@@ -7,7 +7,8 @@
                 <input type="text" v-model="conversor.millas" class="form-control" id="millas"/>
             </div>
             <div class="form-group">
-                <button @click="conversor.convertir()" type="button" class="btn btn-primary" id="convertir">Convertir</button>
+                <button @click="conversor.convertir()" type="button" class="btn btn-primary" id="convertir">Convertir
+                </button>
             </div>
             <div class="form-group">
                 <div class="alert alert-info" role="alert">
@@ -19,6 +20,9 @@
 </template>
 
 <script lang="ts">
+	import Vue from "vue"
+	import Component from 'vue-class-component'
+
 	class Conversor {
 		millas = 0
 		kilometros = 0
@@ -28,12 +32,9 @@
 		}
 	}
 
-	export default {
-		data() {
-			return {
-				conversor: new Conversor()
-			}
-		}
+	@Component
+	export default class ConversorPage extends Vue {
+		conversor = new Conversor()
 	}
 </script>
 
